@@ -24,7 +24,12 @@ html {
   flex-direction: column;
   justify-content: space-evenly;
   cursor: pointer;
+  transition: right .7s;
 
+}
+
+.change .hamburger-menu {
+  right: 33rem;
 }
 
 .line {
@@ -34,6 +39,22 @@ html {
   box-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.2);
 }
 
+.change .line {
+  background-color: rgba(0, 0,0, 0.8);
+}
+
+.change .line-1 {
+  transform: rotate(45deg) translate(.3rem, .8rem);
+}
+
+.change .line-2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .line-3 {
+  transform: rotate(-45deg) translate(.3rem, -.8rem);
+}
 .header {
   width: 100%;
   height: 100vh;
@@ -127,3 +148,79 @@ html {
     opacity: 1;
   }
 }
+
+.sidebar {
+  width: 40rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -40rem;
+
+  background-color: #fff;
+  transition: right .5s;
+}
+
+.change .sidebar {
+  right: 0;
+}
+.menu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-link {
+  font-family: 'Baloo Da 2', serif;
+  font-size: 4rem;
+  color: #555;
+  position: relative;
+}
+
+.menu-link::before {
+  content: attr(data-content);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #c29525;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.3s
+  ease-in-out;
+}
+
+.menu-link:hover::before {
+  width: 100%;
+}
+
+.social-media {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media i {
+  font-size: 2.2rem;
+  margin: 3rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #777;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color .3s;
+}
+
+.social-media i:hover {
+  background-color: #c29525;
+}
+
