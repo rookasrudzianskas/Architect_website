@@ -13,6 +13,10 @@ html {
 
 }
 
+.container {
+  display: none;
+}
+
 .hamburger-menu {
   width: 3rem;
   height: 3rem;
