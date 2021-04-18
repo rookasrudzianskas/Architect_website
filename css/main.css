@@ -820,6 +820,28 @@ bottom: 6rem;
 
 }
 
+@media(max-width: 500px) {
+  html {
+    font-size: 45%;
+  }
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .change .hamburger-menu {
+    right: 38rem;
+  }
+
+  .service {
+    width: 30rem;
+  }
+
+  .footer {
+    height: 18rem;
+  }
+}
+
 
 
 
